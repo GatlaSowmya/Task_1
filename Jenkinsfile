@@ -35,7 +35,7 @@ pipeline{
             steps{
                 sshagent(['staging_server']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@13.39.22.168 << EOF
+                    ssh -o StrictHostKeyChecking=no ubuntu@35.180.32.241 << EOF
                     sudo docker pull sowmya018/tomcat:$BUILD_ID
                     sudo docker run -d --name webapp$BUILD_ID -p ${i}:8080 sowmya018/tomcat:$BUILD_ID
                     '''
