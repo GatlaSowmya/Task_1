@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Code_Pull'){
             steps{
-                git branch: 'main', url: 'https://github.com/GatlaSowmya/Interns_Task_1.git'
+                git branch: 'master', url: 'https://github.com/GatlaSowmya/Task_1.git'
             }
         }
         stage('Code_Build'){
